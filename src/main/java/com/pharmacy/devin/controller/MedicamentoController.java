@@ -1,12 +1,12 @@
 package com.pharmacy.devin.controller;
 
 
+import com.pharmacy.devin.controller.dto.respostapadrao.DefaultResponse;
 import com.pharmacy.devin.entity.Medicamento;
 import com.pharmacy.devin.service.MedicamentoService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import javax.swing.text.html.parser.Entity;
 import java.util.List;
 
 @RestController
@@ -20,15 +20,31 @@ public class MedicamentoController {
     }
 
     @GetMapping
-    public ResponseEntity<List<Medicamento>> getAll(){
-        return medicamentoService.getMedicamentos();
+    public ResponseEntity<DefaultResponse<List<Medicamento>>> getAll(){
+        return medicamentoService.getAllMeds();
     }
 
+
+    @GetMapping(path = "{id}")
+    public ResponseEntity<DefaultResponse<Medicamento>> getMedById(@PathVariable Long id){
+        return medicamentoService.getMedById(id);
+    }
 
     @PostMapping
-    public ResponseEntity<Medicamento> save(@RequestBody Medicamento medicamento){
+    public ResponseEntity<DefaultResponse<Medicamento>> save(@RequestBody Medicamento medicamento){
         return medicamentoService.insert(medicamento);
     }
+
+    @PutMapping(path = "{id}")
+    public ResponseEntity<DefaultResponse<Medicamento>> updateMedById(@PathVariable Long id, @RequestBody Medicamento medicamento) {
+        return medicamentoService.updateMedById(id, medicamento);
+    }
+
+    @DeleteMapping(path = "{id}")
+    public ResponseEntity<DefaultResponse<Void>> deleteById(@PathVariable Long id) {
+        return medicamentoService.deleteById(id);
+    }
+
 
 
 }
