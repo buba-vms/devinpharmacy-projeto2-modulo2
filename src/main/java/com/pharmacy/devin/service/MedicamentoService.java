@@ -28,7 +28,7 @@ public class MedicamentoService {
                 medicamento), HttpStatus.CREATED);
     }
 
-    // pegar todos
+
     public ResponseEntity<DefaultResponse<List<Medicamento>>> getAllMeds() {
         return new ResponseEntity<DefaultResponse<List<Medicamento>>>(
                 new DefaultResponse<>(
