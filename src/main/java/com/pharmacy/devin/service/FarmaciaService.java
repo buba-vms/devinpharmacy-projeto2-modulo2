@@ -5,7 +5,6 @@ import com.pharmacy.devin.controller.dto.farmacia.FarmaciaRequest;
 import com.pharmacy.devin.controller.dto.respostapadrao.DefaultResponse;
 import com.pharmacy.devin.entity.Endereco;
 import com.pharmacy.devin.entity.Farmacia;
-import com.pharmacy.devin.entity.Medicamento;
 import com.pharmacy.devin.feign.FeignCepClient;
 import com.pharmacy.devin.repository.EnderecoRepository;
 import com.pharmacy.devin.repository.FarmaciaRepository;
