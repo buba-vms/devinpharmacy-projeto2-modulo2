@@ -1,6 +1,7 @@
 package com.pharmacy.devin.controller;
 
 
+import com.pharmacy.devin.controller.dto.respostapadrao.DefaultResponse;
 import com.pharmacy.devin.controller.dto.usuario.UsuarioIdResponse;
 import com.pharmacy.devin.controller.dto.usuario.UsuarioRequest;
 import com.pharmacy.devin.controller.dto.usuario.UsuarioResponse;
@@ -22,12 +23,12 @@ public class UsuarioController {
 
 
     @PostMapping("cadastro")
-    public ResponseEntity<UsuarioResponse> save(@RequestBody UsuarioRequest usuarioRequest){
+    public ResponseEntity<DefaultResponse<UsuarioResponse>> save(@RequestBody UsuarioRequest usuarioRequest){
         return usuarioService.insert(usuarioRequest);
     }
 
     @GetMapping("login")
-    public ResponseEntity<UsuarioIdResponse> getUserId(@RequestBody UsuarioRequest usuarioRequest){
+    public ResponseEntity<DefaultResponse<UsuarioIdResponse>> getUserId(@RequestBody UsuarioRequest usuarioRequest){
         return usuarioService.getUserId(usuarioRequest);
     }
 

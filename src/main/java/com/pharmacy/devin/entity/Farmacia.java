@@ -1,10 +1,7 @@
 package com.pharmacy.devin.entity;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 import org.jetbrains.annotations.NotNull;
 
 
@@ -13,6 +10,7 @@ import org.jetbrains.annotations.NotNull;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
+@Builder
 public class Farmacia {
 
     @Id
@@ -44,8 +42,8 @@ public class Farmacia {
 
     @NotNull
     @OneToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER, optional = false)
-    @PrimaryKeyJoinColumn
-    private Endereco id_end;
+    @JoinColumn(name = "id_end")
+    private Endereco idEnd;
 
 
 

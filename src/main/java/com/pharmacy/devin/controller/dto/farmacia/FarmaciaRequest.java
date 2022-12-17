@@ -2,8 +2,17 @@ package com.pharmacy.devin.controller.dto.farmacia;
 
 import com.pharmacy.devin.entity.Endereco;
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 import org.jetbrains.annotations.NotNull;
 
+
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
 public class FarmaciaRequest {
 
 
@@ -23,5 +32,9 @@ public class FarmaciaRequest {
 
     private String complemento;
 
-    private Long numero;
+    private String numero;
+
+    private Double latitude;
+
+    private Double longitude;
 }

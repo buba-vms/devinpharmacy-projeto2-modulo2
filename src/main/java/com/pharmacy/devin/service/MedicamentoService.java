@@ -14,11 +14,12 @@ import java.util.List;
 @Service
 public class MedicamentoService {
 
-    private MedicamentoRepository medicamentoRepository;
+    private final MedicamentoRepository medicamentoRepository;
 
     public MedicamentoService(MedicamentoRepository medicamentoRepository){
         this.medicamentoRepository = medicamentoRepository;
     }
+
 
     public ResponseEntity<DefaultResponse<Medicamento>> insert(Medicamento medicamento){
         medicamentoRepository.save(medicamento);
