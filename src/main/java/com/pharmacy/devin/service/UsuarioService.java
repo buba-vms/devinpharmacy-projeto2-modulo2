@@ -1,5 +1,6 @@
 package com.pharmacy.devin.service;
 
+import com.pharmacy.devin.controller.dto.usuario.UsuarioIdResponse;
 import com.pharmacy.devin.controller.dto.usuario.UsuarioRequest;
 import com.pharmacy.devin.controller.dto.usuario.UsuarioResponse;
 import com.pharmacy.devin.entity.Medicamento;
@@ -24,5 +25,14 @@ public class UsuarioService {
         usuarioRepository.save(entity);
 
         return new ResponseEntity<UsuarioResponse>(response, HttpStatus.CREATED);
+    }
+
+    public ResponseEntity<UsuarioIdResponse> getUserId(UsuarioRequest usuarioRequest) {
+        String email = usuarioRequest.getEmail();
+        String senha = usuarioRequest.getSenha();
+
+        UsuarioIdResponse userId = new UsuarioIdResponse(usuarioRepository.findIdByEmailAndSenha(email, senha));
+
+        return new ResponseEntity<UsuarioIdResponse>(userId, HttpStatus.OK);
     }
 }
