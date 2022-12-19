@@ -93,7 +93,7 @@ public class FarmaciaService {
 
     public ResponseEntity<DefaultResponse<Farmacia>> updateById(Long id, FarmaciaRequest farmaciaRequest) {
         Farmacia farmacia = farmaciaRepository.findById(id).get();
-        Endereco endereco = enderecoRepository.findById(id).get();
+        Endereco endereco = farmacia.getIdEnd();
 
         EnderecoViaCep enderecoViaCep = feignCepClient.buscaCep(farmaciaRequest.getCep());
         endereco = Endereco.builder()
@@ -106,9 +106,9 @@ public class FarmaciaService {
                 .complemento(farmaciaRequest.getComplemento())
                 .latitude(farmaciaRequest.getLatitude())
                 .longitude(farmaciaRequest.getLongitude())
+                .id(farmacia.getIdEnd().getId())
                 .build();
 
-        enderecoRepository.save(endereco);
 
        farmacia = Farmacia.builder()
                 .nomeFantasia(farmaciaRequest.getNomeFantasia())
@@ -118,9 +118,10 @@ public class FarmaciaService {
                 .celular(farmaciaRequest.getCelular())
                 .telefone(farmaciaRequest.getTelefone())
                 .idEnd(endereco)
+               .id(farmacia.getId())
                 .build();
 
-        farmaciaRepository.save(farmacia);
+
 
         return new ResponseEntity<DefaultResponse<Farmacia>>(new DefaultResponse<Farmacia>(
                 202,
