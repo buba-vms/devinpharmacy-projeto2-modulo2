@@ -40,6 +40,7 @@ public class MedicamentoService {
     }
 
 
+
     //by id
     public ResponseEntity<DefaultResponse<Medicamento>> getMedById(Long id) {
         //adicionar tratamento de error no get
