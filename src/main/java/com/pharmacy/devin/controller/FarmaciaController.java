@@ -12,7 +12,8 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("farmacias")
+@RequestMapping(value = "farmacias")
+@CrossOrigin(origins = "*")
 public class FarmaciaController {
 
     private final FarmaciaService farmaciaService;
