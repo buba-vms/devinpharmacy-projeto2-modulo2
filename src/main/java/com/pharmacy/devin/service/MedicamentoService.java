@@ -40,7 +40,6 @@ public class MedicamentoService {
     }
 
 
-
     //by id
     public ResponseEntity<DefaultResponse<Medicamento>> getMedById(Long id) {
         //adicionar tratamento de error no get
@@ -73,6 +72,7 @@ public class MedicamentoService {
                 HttpStatus.ACCEPTED);
     }
 
+
     public ResponseEntity<DefaultResponse<Void>> deleteById(Long id) {
         //adicionar tratamento de error no get
         Medicamento entity = medicamentoRepository.findById(id).get();
@@ -81,6 +81,6 @@ public class MedicamentoService {
         return new ResponseEntity<DefaultResponse<Void>>(new DefaultResponse<>(
                 400, "Medicamento de id " + id + " deletado com sucesso"),
                 HttpStatus.ACCEPTED);
-
     }
+
 }

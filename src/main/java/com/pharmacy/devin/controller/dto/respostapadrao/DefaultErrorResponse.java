@@ -13,8 +13,8 @@ import lombok.Setter;
 public class DefaultErrorResponse {
     private int status;
     private String message;
+    private Throwable cause;
     private Exception error;
-    private String causa;
 
 
 }
