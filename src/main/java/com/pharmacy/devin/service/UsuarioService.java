@@ -28,16 +28,21 @@ public class UsuarioService {
 
 
     public ResponseEntity<DefaultResponse<UsuarioResponse>> insert(UsuarioRequest usuarioRequest){
-        Usuario entity = new Usuario(usuarioRequest.getEmail(), usuarioRequest.getSenha());
-        UsuarioResponse response = new UsuarioResponse(usuarioRequest.getEmail());
-        usuarioRepository.save(entity);
+        try {
+            Usuario entity = new Usuario(usuarioRequest.getEmail(), usuarioRequest.getSenha());
+            UsuarioResponse response = new UsuarioResponse(usuarioRequest.getEmail());
+            usuarioRepository.save(entity);
 
 
 
-        return new ResponseEntity<DefaultResponse<UsuarioResponse>>(new DefaultResponse<UsuarioResponse>(
-                201,
-                "Usuario " + usuarioRequest.getEmail() + " criado com sucesso",
-                response), HttpStatus.CREATED);
+            return new ResponseEntity<DefaultResponse<UsuarioResponse>>(new DefaultResponse<UsuarioResponse>(
+                    201,
+                    "Usuario " + usuarioRequest.getEmail() + " criado com sucesso",
+                    response), HttpStatus.CREATED);
+        }catch (Exception e){
+            throw new BadRequestException("Request Body Invalido");
+        }
+
     }
 
     public ResponseEntity<DefaultResponse<UsuarioIdResponse>>getUserId(UsuarioRequest usuarioRequest) {
