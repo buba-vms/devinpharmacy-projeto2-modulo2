@@ -1,0 +1,371 @@
+{
+	"info": {
+		"_postman_id": "04b08e50-b49a-4fef-911d-18eafea09d25",
+		"name": "Projeto 2 Modulo 2",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "22035597"
+	},
+	"item": [
+		{
+			"name": "Medicamentos",
+			"item": [
+				{
+					"name": "insert",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\": \"nome\",\r\n    \"laboratorio\": \"laboratório\",\r\n    \"dosagem\": \"10ml\",\r\n    \"descricao\": \"fcajdflkasfdjlafdsa\",\r\n    \"precoUnitario\": 24.50,\r\n    \"tipo\": \"controlado\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/medicamentos",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"medicamentos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAll",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\": \"nome\",\r\n    \"laboratorio\": \"laboratório\",\r\n    \"dosagem\": \"10ml\",\r\n    \"descricao\": \"fcajdflkasfdjlafdsa\",\r\n    \"precoUnitario\": 24.50,\r\n    \"tipo\": \"controlado\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/medicamentos",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"medicamentos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getById",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\": \"nome\",\r\n    \"laboratorio\": \"laboratório\",\r\n    \"dosagem\": \"10ml\",\r\n    \"descricao\": \"fcajdflkasfdjlafdsa\",\r\n    \"precoUnitario\": 24.50,\r\n    \"tipo\": \"controlado\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/medicamentos",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"medicamentos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateById",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\": \"nome\",\r\n    \"laboratorio\": \"laboratório\",\r\n    \"dosagem\": \"10ml\",\r\n    \"descricao\": \"fcajdflkasfdjlafdsa\",\r\n    \"precoUnitario\": 24.50,\r\n    \"tipo\": \"controlado\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/medicamentos",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"medicamentos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteById",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\": \"nome\",\r\n    \"laboratorio\": \"laboratório\",\r\n    \"dosagem\": \"10ml\",\r\n    \"descricao\": \"fcajdflkasfdjlafdsa\",\r\n    \"precoUnitario\": 24.50,\r\n    \"tipo\": \"controlado\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/medicamentos/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"medicamentos",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Usuarios",
+			"item": [
+				{
+					"name": "New Request",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\": \"nome\",\r\n    \"laboratorio\": \"laboratório\",\r\n    \"dosagem\": \"10ml\",\r\n    \"descricao\": \"fcajdflkasfdjlafdsa\",\r\n    \"precoUnitario\": 24.50,\r\n    \"tipo\": \"controlado\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/medicamentos",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"medicamentos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New Request Copy",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\": \"nome\",\r\n    \"laboratorio\": \"laboratório\",\r\n    \"dosagem\": \"10ml\",\r\n    \"descricao\": \"fcajdflkasfdjlafdsa\",\r\n    \"precoUnitario\": 24.50,\r\n    \"tipo\": \"controlado\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/medicamentos",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"medicamentos"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Farmacias",
+			"item": [
+				{
+					"name": "New Request",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"razaoSocial\": \"razaoSocial\",\r\n    \"cnpj\": \"cnpj.cnpj\",\r\n    \"nomeFantasia\": \"nomeFantasia\",\r\n    \"email\": \"email\",\r\n    \"telefone\": \"telefone\",\r\n    \"celular\": \"celular\",\r\n    \"cep\": \"82200168\",\r\n    \"complemento\": \"casa casa\",\r\n    \"numero\": \"40\",\r\n    \"latitude\": 50,\r\n    \"longitude\": 50\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/farmacias",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"farmacias"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "teste",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"razaoSocial\": \"razaoSocial\",\r\n    \"cnpj\": \"cnpj.cnpj\",\r\n    \"nomeFantasia\": \"nomeFantasia\",\r\n    \"email\": \"email\",\r\n    \"telefone\": \"telefone\",\r\n    \"celular\": \"celular\",\r\n    \"cep\": \"82200168\",\r\n    \"complemento\": \"casa casa\",\r\n    \"numero\": \"40\",\r\n    \"latitude\": 50,\r\n    \"longitude\": 50\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/farmacias",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"farmacias"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New Request Copy",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"razaoSocial\": \"razaoSoc231312321ial\",\r\n    \"cnpj\": \"cnpj.cnpj\",\r\n    \"nomeFantasia\": \"nomeFantasia\",\r\n    \"email\": \"email\",\r\n    \"telefone\": \"telefone\",\r\n    \"celular\": \"celular\",\r\n    \"cep\": \"82200168\",\r\n    \"complemento\": \"casa casa\",\r\n    \"numero\": \"40\",\r\n    \"latitude\": 50,\r\n    \"longitude\": 50\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/farmacias",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"farmacias"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New Request Copy",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"razaoSocial\": \"razaoSocial\",\r\n    \"cnpj\": \"cnpj.cnpj\",\r\n    \"nomeFantasia\": \"nomeFantasia\",\r\n    \"email\": \"email\",\r\n    \"telefone\": \"telefone\",\r\n    \"celular\": \"celular\",\r\n    \"cep\": \"82200168\",\r\n    \"complemento\": \"casa casa\",\r\n    \"numero\": \"40\",\r\n    \"latitude\": 50,\r\n    \"longitude\": 50\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/farmacias/4",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"farmacias",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/farmacias/3",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"farmacias",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New Request Copy",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/farmacias/3",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"farmacias",
+								"3"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

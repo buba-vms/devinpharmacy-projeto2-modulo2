@@ -20,4 +20,8 @@
 
 - Rode o arquivo `DevinApplication` e o projeto deve funcionar corretamente.
 
+### Passo 6: Testando os end-points
+
+- Para facilitar o teste dos end-points no postman utilize o arquivo `projeto-2-modulo-2.postman_collection.json` no Postman.
+
 ### Em caso de problemas no funcionamento do projeto, entre em contato com o desenvolvedor.
