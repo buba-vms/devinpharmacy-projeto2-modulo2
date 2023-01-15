@@ -1,0 +1,60 @@
+-- Database: devinpharmacy
+
+-- DROP DATABASE IF EXISTS devinpharmacy;
+
+CREATE DATABASE devinpharmacy
+    WITH
+    OWNER = postgres
+    ENCODING = 'UTF8'
+    LC_COLLATE = 'Portuguese_Brazil.1252'
+    LC_CTYPE = 'Portuguese_Brazil.1252'
+    TABLESPACE = pg_default
+    CONNECTION LIMIT = -1
+    IS_TEMPLATE = False;
+	
+		-- Cria a tabela "Usuário"
+CREATE TABLE usuario (
+  id SERIAL PRIMARY KEY,
+  email VARCHAR(255) NOT NULL,
+  senha VARCHAR(255) NOT NULL
+);
+
+-- Cria a tabela "Endereço"
+CREATE TABLE endereco (
+  id SERIAL PRIMARY KEY,
+  cep VARCHAR(8) NOT NULL,
+  logradouro VARCHAR(255) NOT NULL,
+  numero VARCHAR(10) NOT NULL,
+  bairro VARCHAR(255) NOT NULL,
+  cidade VARCHAR(255) NOT NULL,
+  estado VARCHAR(2) NOT NULL,
+  complemento VARCHAR(255),
+  latitude DECIMAL(9,6) NOT NULL,
+  longitude DECIMAL(9,6) NOT NULL
+);
+
+-- Cria a tabela "Farmácia"
+CREATE TABLE farmacia (
+  id SERIAL PRIMARY KEY,
+  razao_social VARCHAR(255) NOT NULL,
+  cnpj VARCHAR(14) NOT NULL,
+  nome_fantasia VARCHAR(255) NOT NULL,
+  email VARCHAR(255) NOT NULL,
+  telefone VARCHAR(15),
+  celular VARCHAR(15) NOT NULL,
+  id_end int NOT NULL,
+  FOREIGN KEY (id_end) REFERENCES endereco (id) 
+);
+
+
+
+-- Cria a tabela "Medicamento"
+CREATE TABLE medicamento (
+  id SERIAL PRIMARY KEY,
+  nome VARCHAR(255) NOT NULL,
+  laboratorio VARCHAR(255) NOT NULL,
+  dosagem VARCHAR(255) NOT NULL,
+  descricao VARCHAR(255),
+  preco_unitario DECIMAL(6,2) NOT NULL,
+  tipo VARCHAR(255) NOT NULL
+);
